@@ -22,6 +22,11 @@ dependencies {
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+	//  mysql 접속 도와주는 라이브러리
+	runtimeOnly("com.mysql:mysql-connector-j")
+	// Hibernate : JPA (java ORM 표준 문법) 구현체 : ORM 라이브러리 (자바 코드로 입출력 가능) > 입출력 속도 저하 : JPA 쓰기 좋게 구현
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 }
 
 tasks.withType<Test> {
